@@ -99,7 +99,7 @@
 			$window.on('load', function() {
 
 				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
+					caption: function($a) { return $a.siblings('p').find('strong').text(); },
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',
@@ -108,7 +108,7 @@
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
-					usePopupNav: true,
+					usePopupNav: false,
 					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
 				});
 
